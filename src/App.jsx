@@ -1,9 +1,16 @@
+// src/App.jsx
 import React from 'react';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
 
 function App() {
   return (
-    <div>
-      <h1>Bones Tresd - Sitio en construcción</h1>
+    <div className="App">
+      <Header />
+      <main>
+        <Hero />
+        {/*(Servicios, Proyectos, etc.) */}
+      </main>
     </div>
   );
 }
