@@ -4,10 +4,15 @@ import './Hero.css';
 const Hero = () => {
     return (
         <section className="hero-section">
+            {/* Esta capa oscurece un poco la imagen de fondo para que el texto blanco se lea perfecto */}
+            <div className="hero-overlay"></div>
+
             <div className="hero-content">
                 <h1 className="hero-title">
-                    PROTESIS<br />
-                    <span>EN,<br />TRESD <br />(En construcción)</span>
+                    <span className="font-light">PROTESIS</span><br />
+                    EN,<br />
+                    TRESD<br />
+                    (EN CONSTRUCCIÓN)
                 </h1>
                 <button className="hero-button">
                     Conócenos

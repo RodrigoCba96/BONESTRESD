@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
 import './Header.css';
+// Importamos tu logo desde la carpeta assets
+import logoBones from '../../assets/bones-logo-blanco.jpg';
 
 const Header = () => {
-    // Estado para controlar si el menú móvil está abierto
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
         <header className="main-header">
             <div className="header-container">
                 <div className="logo">
-                    <span>Bones Tresd</span>
+                    {/* Colocamos la imagen del logo */}
+                    <a href="#">
+                        <img src={logoBones} alt="Bones TresD" />
+                    </a>
                 </div>
 
-                {/* Botón hamburguesa visible solo en móviles */}
                 <div
                     className="menu-toggle"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
-                    {/* Símbolo de hamburguesa simple o la X si está abierto */}
                     {isMenuOpen ? '✕' : '☰'}
                 </div>
 
-                {/* Agregamos la clase 'open' si el estado es true */}
                 <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-                    <a href="#services" onClick={() => setIsMenuOpen(false)}>Servicios</a>
-                    <a href="#projects" onClick={() => setIsMenuOpen(false)}>Proyectos</a>
-                    <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contacto</a>
+                    <a href="#institucional" onClick={() => setIsMenuOpen(false)}>Institucional</a>
+                    <a href="#servicios" onClick={() => setIsMenuOpen(false)}>Servicios</a>
+                    <a href="#contacto" onClick={() => setIsMenuOpen(false)}>Contacto</a>
                 </nav>
             </div>
         </header>
